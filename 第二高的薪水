@@ -1,0 +1,5 @@
+# https://leetcode-cn.com/explore/interview/card/bytedance/247/bonus/1039/
+# 编写一个 SQL 查询，获取 Employee 表中第二高的薪水（Salary） 。
+# 我的方案排名比较靠后，应该会有更快速的查询方式
+# Write your MySQL query statement below
+select max(Salary) as SecondHighestSalary from Employee where Salary<(select max(Salary) from Employee);
